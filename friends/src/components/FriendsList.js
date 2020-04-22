@@ -2,6 +2,8 @@ import React from "react";
 
 // import Loader from "react-loader-spinner"
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import NewFriend from "./NewFriend";
+import { Route } from "react-router-dom";
 
 class FriendsList extends React.Component {
   state = {
@@ -29,6 +31,7 @@ class FriendsList extends React.Component {
     return (
       <div className="friends-container">
         <header>-FRIENDS LIST-</header>
+        <NewFriend />
         {this.state.friends.map((item) => {
           return (
             <div>
@@ -38,6 +41,8 @@ class FriendsList extends React.Component {
             </div>
           );
         })}
+        <Route component={NewFriend} />
+        {/* <NewFriend state={this.state} /> */}
       </div>
     );
   }
