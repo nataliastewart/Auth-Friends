@@ -34,7 +34,7 @@ class FriendsList extends React.Component {
         <NewFriend />
         {this.state.friends.map((item) => {
           return (
-            <div>
+            <div key={item.id}>
               <h3>{item.name}</h3>
               <p>Age: {item.age}</p>
               <p>Email:{item.email}</p>
