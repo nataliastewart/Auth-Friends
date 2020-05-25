@@ -3,6 +3,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 //components
 import Friend from "./Friend";
+import AddFriend from "./AddFriend";
 
 const FriendsList = () => {
   const [friendList, setFriendList] = useState([]);
@@ -30,13 +31,8 @@ const FriendsList = () => {
 
   return (
     <div>
-      <img
-        src="http://pluspng.com/img-png/to-do-list-png-the-power-of-a-to-do-list-imodelafrica-1024.png"
-        alt="To Do List PNG"
-        alt="Checklist Poll Task To Do List Clipboard Comments - Task To Do Icon @clipartmax.com"
-        className="todo-picture"
-      />
-      <h3>Friends List</h3>
+      <h2>Friends List</h2>
+      <AddFriend setFriendList={setFriendList} />
       <div className="wrap-list">
         {friendList.map((item) => (
           <Friend item={item} key={item.id} deleteFriend={deleteFriend} />
