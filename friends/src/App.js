@@ -19,7 +19,6 @@ function App() {
             <Link to="/protected">Protected Page</Link>
           </li>
         </ul>
-
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/signup" component={SignUp} />

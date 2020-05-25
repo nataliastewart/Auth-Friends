@@ -36,10 +36,10 @@ const Login = (props) => {
         className="todo-picture"
       />
       <h3>Login</h3>
-      <div>
+      <div className="wrap-login">
         <form onSubmit={handleSubmit}>
           <label>
-            username:
+            Username:
             <input
               type="text"
               name="username"
@@ -47,8 +47,10 @@ const Login = (props) => {
               onChange={handleChange}
             />
           </label>
+          <br />
+          <br />
           <label>
-            password:
+            Password:
             <input
               type="password"
               name="password"
@@ -58,10 +60,15 @@ const Login = (props) => {
           </label>
           <br />
           <br />
-          <button>Log In</button>
+          <button className="login-btn">Log In</button>
           {login.isFetching && "Please wait...logging you in"}
         </form>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        <p>
+          Don't have an account?{" "}
+          <Link className="signup-link" to="/signup">
+            Sign Up
+          </Link>
+        </p>
       </div>
     </div>
   );
