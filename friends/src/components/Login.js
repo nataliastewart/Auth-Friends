@@ -65,7 +65,7 @@ const Login = (props) => {
           {login.isFetching && "Please wait...logging you in"}
         </form>
         <p>
-          Don't have an account?{" "}
+          Don't have an account?
           <Link className="signup-link" to="/signup">
             Sign Up
           </Link>

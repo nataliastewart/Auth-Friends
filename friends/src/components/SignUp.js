@@ -42,6 +42,7 @@ const SignUp = (props) => {
           onChange={handleChange}
         />
         <br />
+        <br />
         <input
           type="password"
           name="password"
@@ -49,6 +50,7 @@ const SignUp = (props) => {
           placeholder="password"
           onChange={handleChange}
         />
+        <br />
         <br />
         <input
           type="email"

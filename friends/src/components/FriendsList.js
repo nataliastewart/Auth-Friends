@@ -17,6 +17,17 @@ const FriendsList = () => {
       .catch((err) => console.log("ERROR FirendsList", err));
   }, []);
 
+  const deleteFriend = (id) => {
+    axiosWithAuth()
+      .delete(`/api/friends/${id}`)
+      .then((res) => {
+        console.log("DELETE-RES:", res);
+        setFriendList(res.data);
+        //  props.history.push("/protected")
+      })
+      .catch((err) => console.log("ERROR- DELETE:", err));
+  };
+
   return (
     <div>
       <img
@@ -28,7 +39,7 @@ const FriendsList = () => {
       <h3>Friends List</h3>
       <div className="wrap-list">
         {friendList.map((item) => (
-          <Friend item={item} key={item.id} />
+          <Friend item={item} key={item.id} deleteFriend={deleteFriend} />
         ))}
       </div>
     </div>
