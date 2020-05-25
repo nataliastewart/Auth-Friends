@@ -29,14 +29,15 @@ const Login = (props) => {
 
   return (
     <div className="wrapper-login">
-      <img
+      {/* <img
         src="http://pluspng.com/img-png/to-do-list-png-the-power-of-a-to-do-list-imodelafrica-1024.png"
         alt="To Do List PNG"
         alt="Checklist Poll Task To Do List Clipboard Comments - Task To Do Icon @clipartmax.com"
         className="todo-picture"
-      />
-      <h3>Login</h3>
+      /> */}
+
       <div className="wrap-login">
+        <h3>Login</h3>
         <form onSubmit={handleSubmit}>
           <label>
             Username:
