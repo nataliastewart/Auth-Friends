@@ -30,7 +30,7 @@ export default function AddFriend(props) {
   return (
     <div>
       <form onSubmit={addNewFriend}>
-        <h3>Add a new Friend:</h3>
+        <h3>Add a new Todo:</h3>
         <label>Name:</label>
         <input
           type="text"

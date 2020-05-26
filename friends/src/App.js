@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
 import PrivateRoute from "./components/PrivateRoute";
+import UpdateFriend from "./components/UpdateFriend";
 
 function App() {
   return (
@@ -13,15 +14,16 @@ function App() {
       <div className="App">
         <ul>
           <li>
-            <Link to="/">Login</Link>
+            <Link to="/">Log Out</Link>
           </li>
-          <li>
-            <Link to="/protected">Protected Page</Link>
-          </li>
+          {/* <li>
+            <Link to="/protected">Todo List</Link>
+          </li> */}
         </ul>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/update-friend/:id" component={UpdateFriend} />
           <PrivateRoute path="/protected" component={FriendsList} />
         </Switch>
       </div>
